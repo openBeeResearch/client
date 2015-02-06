@@ -1,0 +1,7 @@
+#Activa Adc
+modprobe adc
+
+#Reverse ssh
+su beeuser -c 'autossh -f -M 0 -q -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R 7999:localhost:22 bee@161.116.80.31' &
+su beeuser -c 'autossh -f -M 0 -q -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R 7999:localhost:22 cartodb@161.116.80.73' &
+su beeuser -c 'autossh -f -M 0 -q -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R 7999:localhost:5901 bee@161.116.80.31' &
